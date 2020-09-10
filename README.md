@@ -1,30 +1,68 @@
-# pedro-custom
+# Custom components
 
-> Custom components
-
-## Build Setup
+Test custom components using CSS
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+# Table/Row
+    <TableContainer>
+        //elements
+    </TableContainer>
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+``` bash
+# Column
+      <TableColumn>
+        //elements
+      </TableColumn>
+```
+
+``` bash
+# Input text
+        <InputText
+          inputType='text|number|date|email'
+          label='Label Example'
+          :leftIcon="require('@/assets/icon.svg')"
+          @left-icon-click="functionToCall"
+          required
+          :step='0.1'
+          name='nameExample'
+          :rightIcon="require('@/assets/icon.svg')"
+          @right-icon-click="functionToCall"
+          v-model="modelExample"
+        />
+```
+
+``` bash
+# File input
+        <FileInput
+          label='Label Example'
+          name='nameExample'
+          v-model="modelExample"
+        />
+```
+
+``` bash
+# Select input
+        <Select
+          label="Label Example"
+          name="nameExample"
+          :items="itemsArray"
+          v-model="modelExample"
+        />
+```
+``` bash
+# button
+        <Button @clickAction="functionToCall">
+          Button Text
+        </Button>
+```
+
+``` bash
+# Textarea
+        <TextArea
+          v-model="modelExample"
+          label="Label Example"
+          name="nameExample"
+          required
+         />
+```
